@@ -1,0 +1,12 @@
+version: '2'
+    
+services:
+ 
+   anaconda:
+     image: jupyter/datascience-notebook
+     container_name: jupyter     
+     ports:
+       - "8888:8888"     
+     command: /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --NotebookApp.token='teste'"
+     volumes:
+       - ./notebooks:/opt/notebooks
