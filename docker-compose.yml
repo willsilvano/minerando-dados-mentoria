@@ -7,6 +7,6 @@ services:
      container_name: jupyter     
      ports:
        - "8888:8888"     
-     command: /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --NotebookApp.token='teste'"
+     command: /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --NotebookApp.token=''"
      volumes:
        - ./notebooks:/opt/notebooks
